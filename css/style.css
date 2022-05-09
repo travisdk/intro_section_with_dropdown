@@ -1,0 +1,57 @@
+/* CSS RESETS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+
+  display: none;
+}
+.nav-item {
+}
+.nav-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* MENU TOGGLE BUTTON VIA CSS */
+.input-checkbox {
+  display: none;
+}
+.input-checkbox:checked ~ .nav-links {
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  width: 100%;
+  position: absolute;
+  background-color: #999;
+  padding: 2em;
+}
+.toggle-button {
+  cursor: pointer;
+}
+.toggle-button span {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  display: block;
+  background-color: black;
+}
