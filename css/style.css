@@ -77,13 +77,13 @@ body {
 }
 
 /* HERO IMAGE */
-
-.hero-imagewrapper {
+.hero-wrapper {
   grid-area: hero;
 }
 .hero-image {
-  display: block;
   width: 100%;
+  display: block;
+
   max-width: 750px; /* avoid stretching image - margin instead */
   margin: 0 auto;
 }
@@ -102,6 +102,17 @@ body {
   line-height: 1.5;
   padding: 0 0.5em;
 }
+.slogan-cta {
+  background-color: var(--color-almost-black);
+  color: var(--color-almost-white);
+  font-weight: bold;
+  font-family: inherit;
+  border-radius: 12px;
+  margin: 1.5em;
+  border: 0;
+  outline: none;
+  padding: 1em 1.5em;
+}
 
 .footer {
   grid-area: footer;
@@ -117,6 +128,15 @@ body {
   flex: 1 1 100px;
   max-width: 130px;
   width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media (min-width: 768px) {

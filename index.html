@@ -23,15 +23,6 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <header class="header">
@@ -59,17 +50,21 @@
       </nav>
     </header>
     <div class="grid">
-      <figure class="hero-imagewrapper">
+      <picture>
+        <source
+          srcset="./images/image-hero-desktop.png"
+          media="(min-width : 768px)"
+        />
+        <source
+          srcset="./images/image-hero-mobile.png"
+          media="(max-width : 767px)"
+        />
         <img
           class="hero-image"
-          srcset="
-            ./images/image-hero-mobile.png  750w,
-            ./images/image-hero-desktop.png 960w
-          "
-          sizes="(max-width : 768px) 750px, 960px"
+          src="./images/image-hero-mobile.png"
           alt="Photo of a younger man holding af laptop in his hands. Geometric symbols surround him"
         />
-      </figure>
+      </picture>
       <main class="slogan-block">
         <h1 class="slogan-caption">Make remote work</h1>
         <p class="slogan-copytext">
