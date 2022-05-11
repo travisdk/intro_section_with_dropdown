@@ -7,51 +7,129 @@
   box-sizing: border-box;
 }
 
+/* Custom CSS properties --* */
+
+:root {
+  --main-fontfamily: "Epilogue", Arial, Helvetica, sans-serif;
+  --main-fontsize: 18px;
+  --color-almost-black: hsl(0, 0%, 8%);
+  --color-medium-gray: hsl(0, 0%, 41%);
+  --color-almost-white: hsl(0, 0%, 98%);
+}
+
 body {
-  font-family: "Epilogue", Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: var(--main-fontfamily);
+  font-size: var(--main-fontsize);
+  background-color: var(--color-almost-white);
 }
 
 .header {
   padding: 1em;
   display: flex;
   justify-content: space-between;
-
-  align-items: center;
 }
 
 .nav-links {
   list-style: none;
-
   display: none;
 }
 .nav-item {
 }
+
 .nav-link {
   text-decoration: none;
   display: block;
 }
 
-/* MENU TOGGLE BUTTON VIA CSS */
-.input-checkbox {
-  display: none;
+/* Grid for the hero, slogan(main) and footer sections */
+.grid {
+  display: grid;
+  text-align: center;
+  margin: 0 auto;
+
+  grid-template-areas:
+    "hero"
+    "main"
+    "footer";
 }
-.input-checkbox:checked ~ .nav-links {
-  display: flex;
-  flex-direction: column;
-  left: 50%;
-  width: 100%;
-  position: absolute;
-  background-color: #999;
-  padding: 2em;
-}
+
+/* MENU TOGGLE BUTTON (JS) */
+
 .toggle-button {
   cursor: pointer;
-}
-.toggle-button span {
+  appearance: none;
+  background: none;
+  border: 0;
+  outline: none;
   width: 30px;
-  height: 3px;
-  margin-bottom: 5px;
+  height: 25px;
+  /* TODO : what is correct size?? */
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.toggle-button.collapsed {
+  background-image: url("../images/icon-menu.svg"); /* image to expand menu */
+}
+.toggle-button.expanded {
+  height: 25px;
+  background-image: url("../images/icon-close-menu.svg"); /* image to collapse menu */
+}
+
+/* HERO IMAGE */
+
+.hero-imagewrapper {
+  grid-area: hero;
+}
+.hero-image {
   display: block;
-  background-color: black;
+  width: 100%;
+  max-width: 750px; /* avoid stretching image - margin instead */
+  margin: 0 auto;
+}
+/* SLOGAN BLOCK (MAIN) */
+.slogan-block {
+  grid-area: main;
+  padding: 2em 0.5em;
+}
+.slogan-caption {
+  color: var(--color-almost-black);
+}
+
+.slogan-copytext {
+  margin-top: 0.5em;
+  color: var(--color-medium-gray);
+  line-height: 1.5;
+  padding: 0 0.5em;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  gap: 5%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  margin-bottom: 2em;
+}
+
+.client-icon {
+  flex: 1 1 100px;
+  max-width: 130px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    max-width: 960px; /* avoid stretching image - margin instead */
+  }
+
+  /* two-column grid layout */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas:
+      "main   hero"
+      "footer hero";
+  }
 }

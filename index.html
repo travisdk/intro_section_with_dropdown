@@ -40,11 +40,6 @@
       /></a>
 
       <nav class="nav">
-        <input type="checkbox" id="input-checkbox" class="input-checkbox" />
-        <label for="input-checkbox" class="toggle-button"
-          ><span></span><span></span><span></span>
-          <!-- hamburger -->
-        </label>
         <ul class="nav-links">
           <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Company</a></li>
@@ -57,24 +52,40 @@
             <a href="#" class="nav-link register-btn">Register</a>
           </li>
         </ul>
+        <button
+          class="toggle-button collapsed"
+          id="toggle-menu-button"
+        ></button>
       </nav>
     </header>
-    <div class="hero-image"></div>
-    <div class="slogan-block">
-      <h1 class="slogan-caption">Make remote work</h1>
-      <p class="slogan-copytext">
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-      </p>
-      <button class="slogan-cta">Learn more</button>
-    </div>
-    <footer class="footer">
-      <img src="./images/client-databiz.svg" class="client-icons" />
-      <img src="./images/client-audiophile.svg" class="client-icons" />
-      <img src="./images/client-meet.svg" class="client-icons" />
-      <img src="./images/client-maker.svg" class="client-icons" />
-    </footer>
+    <div class="grid">
+      <figure class="hero-imagewrapper">
+        <img
+          class="hero-image"
+          srcset="
+            ./images/image-hero-mobile.png  750w,
+            ./images/image-hero-desktop.png 960w
+          "
+          sizes="(max-width : 768px) 750px, 960px"
+          alt="Photo of a younger man holding af laptop in his hands. Geometric symbols surround him"
+        />
+      </figure>
+      <main class="slogan-block">
+        <h1 class="slogan-caption">Make remote work</h1>
+        <p class="slogan-copytext">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="slogan-cta">Learn more</button>
+      </main>
 
+      <footer class="footer">
+        <img src="./images/client-databiz.svg" class="client-icon" />
+        <img src="./images/client-audiophile.svg" class="client-icon" />
+        <img src="./images/client-meet.svg" class="client-icon" />
+        <img src="./images/client-maker.svg" class="client-icon" />
+      </footer>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

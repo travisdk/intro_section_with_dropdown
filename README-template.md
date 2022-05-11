@@ -48,7 +48,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ## My process
 
 Considering wether it's best to use Flexbox or CSS Grid for the overall layout of the site.
-For now decided to go with Flexbox as there is not that many different components on the page.
+For now decided to go with a mix, Flexbox for the header/nav part and
+Grid for placement of all other main elements on the page
 
 ### Built with
 
@@ -56,8 +57,7 @@ For now decided to go with Flexbox as there is not that many different component
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Customer CSS properties
 
 ### What I learned
 
@@ -96,7 +96,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 
-  **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
