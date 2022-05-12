@@ -47,13 +47,29 @@ body {
 }
 
 .nav-item {
+  display: flex;
 }
 
 .nav-link {
-  padding: 1em;
+  padding: 0.8em 1.5em;
   text-decoration: none;
-  display: block;
+  display: inline-block;
   color: var(--color-medium-gray);
+}
+
+.nav-link:hover {
+  color: var(--color-almost-black);
+}
+
+.nav-link.login-btn {
+  text-align: center;
+  margin: 1em auto 0;
+}
+.nav-link.register-btn {
+  margin: 0 auto;
+  border: 1px solid var(--color-medium-gray);
+  border-radius: 15px;
+  padding: 0.5em 3em;
 }
 
 /* Grid for the hero, slogan(main) and footer sections */
