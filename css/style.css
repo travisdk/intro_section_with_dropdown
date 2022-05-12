@@ -28,17 +28,32 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .nav-links {
-  list-style: none;
+  background-color: var(--color-almost-white);
+  list-style-type: none;
+}
+.nav-links.collapsed {
   display: none;
 }
+.nav-links.expanded {
+  top: 7%;
+  left: 36%;
+  right: 0;
+  height: 90%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
 .nav-item {
 }
 
 .nav-link {
+  padding: 1em;
   text-decoration: none;
   display: block;
+  color: var(--color-medium-gray);
 }
 
 /* Grid for the hero, slogan(main) and footer sections */
@@ -74,6 +89,7 @@ body {
 .toggle-button.expanded {
   height: 25px;
   background-image: url("../images/icon-close-menu.svg"); /* image to collapse menu */
+  z-index: 10000;
 }
 
 /* HERO IMAGE */
@@ -90,9 +106,10 @@ body {
 /* SLOGAN BLOCK (MAIN) */
 .slogan-block {
   grid-area: main;
-  padding: 2em 0.5em;
+  padding: 2.5em 0.5em;
 }
 .slogan-caption {
+  font-size: 34px;
   color: var(--color-almost-black);
 }
 
@@ -105,13 +122,12 @@ body {
 .slogan-cta {
   background-color: var(--color-almost-black);
   color: var(--color-almost-white);
+  display: inline-block;
+  text-decoration: none;
   font-weight: bold;
-  font-family: inherit;
-  border-radius: 12px;
+  border-radius: 20px;
   margin: 1.5em;
-  border: 0;
-  outline: none;
-  padding: 1em 1.5em;
+  padding: 1em 1em;
 }
 
 .footer {
@@ -121,7 +137,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 1em;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 
 .client-icon {
