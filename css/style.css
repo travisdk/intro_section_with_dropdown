@@ -45,17 +45,18 @@ body {
 .nav-links {
   background-color: var(--color-almost-white);
   list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 36%;
+  right: 0;
+  height: 100%;
+  padding-top: 3em;
+  flex-direction: column;
+  z-index: 9999;
 }
 
 .nav-links.expanded {
-  top: 7%;
-  left: 36%;
-  right: 0;
-  height: 90%;
-  position: absolute;
   display: flex;
-  flex-direction: column;
-  z-index: 9999;
 }
 
 .nav-links:not(.expanded) {
@@ -141,6 +142,9 @@ body {
 /* MENU TOGGLE BUTTON (JS) */
 
 .toggle-button {
+  z-index: 10000;
+  right: 2em;
+  position: absolute;
   cursor: pointer;
   appearance: none;
   background: none;
@@ -153,13 +157,11 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.toggle-button.collapsed {
+.toggle-button:not(.expanded) {
   background-image: url("../images/icon-menu.svg"); /* image to expand menu */
 }
 .toggle-button.expanded {
-  height: 25px;
   background-image: url("../images/icon-close-menu.svg"); /* image to collapse menu */
-  z-index: 10000;
 }
 
 /* HERO IMAGE */
