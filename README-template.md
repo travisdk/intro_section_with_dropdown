@@ -98,8 +98,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
 - https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture
+- https://discourse.webflow.com/t/how-do-i-darken-the-rest-of-the-page-behind-a-dropdown-menu/17492
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+  **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 

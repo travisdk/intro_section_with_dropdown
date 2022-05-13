@@ -28,13 +28,25 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.dimmer {
+  display: none;
+}
+.dimmer.dim {
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* nav-links - top level link list */
 .nav-links {
   background-color: var(--color-almost-white);
   list-style-type: none;
 }
-.nav-links.collapsed {
-  display: none;
-}
+
 .nav-links.expanded {
   top: 7%;
   left: 36%;
@@ -46,12 +58,21 @@ body {
   z-index: 9999;
 }
 
+.nav-links:not(.expanded) {
+  display: none;
+}
+
+/* nav-item 2 variants */
+
 .nav-item {
   display: block;
 }
 .nav-item-center {
   display: flex;
 }
+
+/* nav-link */
+
 .nav-link {
   padding: 0.8em 1.5em;
   cursor: pointer;
@@ -77,6 +98,8 @@ body {
 .nav-link:hover {
   color: var(--color-almost-black);
 }
+
+/* two variants of the nav-link */
 .nav-link.login-btn {
   text-align: center;
   margin: 0 auto;
@@ -87,6 +110,8 @@ body {
   padding: 0.5em 3em;
   margin: 0 auto;
 }
+
+/* second level link lists */
 .nav-sublinks.expanded {
   display: flex;
   flex-direction: column;
@@ -94,6 +119,11 @@ body {
 }
 .nav-sublinks:not(.expanded) {
   display: none;
+}
+
+/* indent on second level links */
+.nav-sublinks .nav-item {
+  padding-left: 1em;
 }
 
 /* Grid for the hero, slogan(main) and footer sections */
