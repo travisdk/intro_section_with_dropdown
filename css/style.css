@@ -51,6 +51,7 @@ body {
   right: 0;
   height: 100%;
   padding-top: 3em;
+
   flex-direction: column;
   z-index: 9999;
 }
@@ -67,6 +68,7 @@ body {
 
 .nav-item {
   display: block;
+  padding-left: 6%;
 }
 .nav-item-center {
   display: flex;
@@ -75,7 +77,7 @@ body {
 /* nav-link */
 
 .nav-link {
-  padding: 0.8em 1.5em;
+  padding: 0.8em 0.3em;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
@@ -86,14 +88,19 @@ body {
 
 .nav-link.has-sub::after {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  right: 10px;
-  top: 10px;
-  content: url("../images/icon-arrow-down.svg");
+  content: " ";
+  width: 15px;
+  height: 15px;
+  right: -20px;
+  top: 20px;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .nav-link.has-sub.expanded::after {
-  content: url("../images/icon-arrow-up.svg");
+  background-image: url("../images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .nav-link:hover {
@@ -103,7 +110,7 @@ body {
 /* two variants of the nav-link */
 .nav-link.login-btn {
   text-align: center;
-  margin: 0 auto;
+  margin: 1em auto 0;
 }
 .nav-link.register-btn {
   border: 1px solid var(--color-medium-gray);

@@ -9,7 +9,6 @@ toggleMenuButton.addEventListener("click", (e) => {
   dimmer.classList.toggle("dim");
 });
 
-// Is .has-sub class neccessary ??
 const subMenuLinks = document.querySelectorAll(".has-sub");
 subMenuLinks.forEach((subMenuLink) => {
   subMenuLink.addEventListener("click", (e) => {
