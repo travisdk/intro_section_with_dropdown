@@ -51,16 +51,28 @@ body {
 }
 
 .nav-link {
+  position: relative;
   padding: 0.8em 1.5em;
+  cursor: pointer;
+  user-select: none;
   text-decoration: none;
   display: inline-block;
   color: var(--color-medium-gray);
 }
 
+.nav-link.has-sub::after {
+  content: url("../images/icon-arrow-down.svg");
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.nav-link.has-sub.expanded::after {
+  content: url("../images/icon-arrow-up.svg");
+}
+
 .nav-link:hover {
   color: var(--color-almost-black);
 }
-
 .nav-link.login-btn {
   text-align: center;
   margin: 1em auto 0;
@@ -70,6 +82,18 @@ body {
   border: 1px solid var(--color-medium-gray);
   border-radius: 15px;
   padding: 0.5em 3em;
+}
+.nav-sublinks.expanded {
+  display: flex;
+
+  z-index: 99999;
+  flex-direction: column;
+
+  margin-left: 1em;
+  margin-top: 1em;
+}
+.nav-sublinks:not(.expanded) {
+  display: none;
 }
 
 /* Grid for the hero, slogan(main) and footer sections */

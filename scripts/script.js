@@ -16,3 +16,13 @@ toggleMenuButton.addEventListener("click", (e) => {
     navLinks.classList.remove("expanded");
   }
 });
+
+const subMenuLinks = document.querySelectorAll(".has-sub");
+subMenuLinks.forEach((subMenuLink) => {
+  subMenuLink.addEventListener("click", (e) => {
+    const link = e.target;
+    link.classList.toggle("expanded");
+    const subMenu = link.nextElementSibling;
+    subMenu.classList.toggle("expanded");
+  });
+});
