@@ -233,11 +233,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 768px) {
-  .hero-image {
-    max-width: 960px; /* avoid stretching image - margin instead */
-  }
-
+@media (min-width: 961px) {
   /* two-column grid layout */
   .grid {
     grid-template-columns: 1fr 1fr;
@@ -245,5 +241,66 @@ body {
     grid-template-areas:
       "main   hero"
       "footer hero";
+
+    max-width: 1200px;
+  }
+  .header {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav {
+    width: 100%;
+  }
+  .toggle-button {
+    display: none;
+  }
+
+  /*TODO:  this ??? */
+  .nav-links:not(.expanded) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0;
+    padding: 0;
+  }
+  .nav-item-center {
+    padding-left: 6%;
+  }
+
+  .nav-link.login-btn,
+  .nav-link.register-btn {
+    margin-top: 0;
+  }
+  .nav-link.register-btn {
+    padding: 1em;
+  }
+  .nav-links li:nth-child(5) {
+    margin-left: auto;
+  }
+  .nav-sublinks {
+    position: absolute;
+    background-color: white;
+    padding: 1em 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 0 30px #aaa;
+  }
+  .nav-sublinks .nav-item {
+    padding: 0;
+  }
+  .hero-image {
+    max-width: 400px;
+  }
+  .slogan-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .slogan-caption {
+    font-size: 64px;
   }
 }
