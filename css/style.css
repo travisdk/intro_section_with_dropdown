@@ -28,7 +28,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
+.logo {
+  width: 90px;
+}
 .dimmer {
   display: none;
 }
@@ -105,6 +107,7 @@ body {
 
 .nav-link:hover {
   color: var(--color-almost-black);
+  transform: scale(1.05);
 }
 
 /* two variants of the nav-link */
@@ -208,6 +211,11 @@ body {
   margin: 1.5em;
   padding: 1em 1em;
 }
+.slogan-cta:hover {
+  background-color: var(--color-almost-white);
+  color: var(--color-almost-black);
+  border: 1px solid var(--color-almost-black);
+}
 
 .footer {
   grid-area: footer;
@@ -242,14 +250,17 @@ body {
       "main   hero"
       "footer hero";
 
-    max-width: 1200px;
+    max-width: 1250px;
     column-gap: 10%;
   }
   .header {
     align-items: center;
     justify-content: space-between;
+    padding: 1em 1em 0.5em 1em;
   }
-
+  .logo {
+    padding-top: 10px;
+  }
   .nav {
     width: 100%;
   }
@@ -267,8 +278,9 @@ body {
     margin-top: 0;
     padding: 0;
   }
+  .nav-item,
   .nav-item-center {
-    padding-left: 6%;
+    padding-left: 4%;
   }
 
   .nav-link.login-btn,
@@ -291,17 +303,17 @@ body {
   .nav-sublinks .nav-item {
     padding: 0;
   }
+  .hero-container,
+  .slogan-block {
+    margin-top: 4em;
+  }
   .hero-container {
-    margin-top: 5em;
-    margin-right: 4em;
+    margin-right: 2em;
   }
-  .hero-image {
-    max-width: 480px;
-  }
+
   .slogan-block {
     max-width: 480px;
     text-align: left;
-    margin-top: 5em;
     margin-left: 2em;
 
     padding: 0;
@@ -322,6 +334,6 @@ body {
     align-items: flex-end;
   }
   .attribution {
-    margin-top: 4em;
+    margin-top: 6em;
   }
 }
