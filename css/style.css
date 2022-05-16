@@ -212,9 +212,7 @@ body {
   padding: 1em 1em;
 }
 .slogan-cta:hover {
-  background-color: var(--color-almost-white);
-  color: var(--color-almost-black);
-  border: 1px solid var(--color-almost-black);
+  box-shadow: 3px 3px 15px var(--color-medium-gray);
 }
 
 .footer {
@@ -268,7 +266,6 @@ body {
     display: none;
   }
 
-  /*TODO:  this ??? */
   .nav-links:not(.expanded) {
     position: static;
     display: flex;
@@ -303,17 +300,15 @@ body {
   .nav-sublinks .nav-item {
     padding: 0;
   }
-  .hero-container,
-  .slogan-block {
-    margin-top: 4em;
-  }
   .hero-container {
+    margin-top: 2.5em;
     margin-right: 2em;
   }
 
   .slogan-block {
     max-width: 480px;
     text-align: left;
+    margin-top: 8.5em;
     margin-left: 2em;
 
     padding: 0;
@@ -322,6 +317,7 @@ body {
     font-size: 70px;
   }
   .slogan-copytext {
+    margin-top: 3em;
     padding: 0;
   }
   .slogan-cta {
@@ -330,8 +326,9 @@ body {
   }
   .footer {
     margin-left: 2em;
-    margin-bottom: 0;
-    align-items: flex-end;
+    margin-top: 2.2em;
+    align-items: center;
+    padding: 0;
   }
   .attribution {
     margin-top: 6em;
