@@ -12,24 +12,114 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Epilogue:500,700"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="scripts/script.js" defer></script>
+
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    test Features Company Careers About Login Register Make remote work Get your
-    team in sync, no matter your location. Streamline processes, create team
-    rituals, and watch productivity soar. Learn more
+    <header class="header">
+      <a href="#" class="logo"
+        ><img src="./images/logo.svg" alt="site logo - text saying SNAP"
+      /></a>
 
+      <nav class="nav">
+        <div class="dimmer"></div>
+        <button id="toggle-menu-button" class="toggle-button"></button>
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-item">
+            <a class="nav-link has-sub">Features</a>
+            <ul class="nav-sublinks">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img class="menu-icon" src="images/icon-todo.svg" />
+                  <span>Todo List</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img class="menu-icon" src="images/icon-calendar.svg" />
+                  <span>Calendar</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img class="menu-icon" src="images/icon-reminders.svg" />
+                  <span>Reminders</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img class="menu-icon" src="images/icon-planning.svg" />
+                  <span>Planning</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link has-sub">Company</a>
+            <ul class="nav-sublinks">
+              <li class="nav-item">
+                <a class="nav-link" href="#">History </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Team </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item-center">
+            <a href="#" class="nav-link login-btn">Login</a>
+          </li>
+          <li class="nav-item-center">
+            <a href="#" class="nav-link register-btn">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="grid">
+      <picture class="hero-container">
+        <source
+          srcset="./images/image-hero-desktop.png"
+          media="(min-width : 768px)"
+        />
+        <source
+          srcset="./images/image-hero-mobile.png"
+          media="(max-width : 767px)"
+        />
+        <img
+          class="hero-image"
+          src="./images/image-hero-mobile.png"
+          alt="Photo of a younger man holding af laptop in his hands. Geometric symbols surround him"
+        />
+      </picture>
+      <main class="slogan-block">
+        <h1 class="slogan-caption">Make remote work</h1>
+        <p class="slogan-copytext">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <a href="#" class="slogan-cta">Learn more</a>
+      </main>
+
+      <footer class="footer">
+        <img src="./images/client-databiz.svg" class="client-icon" />
+        <img src="./images/client-audiophile.svg" class="client-icon" />
+        <img src="./images/client-meet.svg" class="client-icon" />
+        <img src="./images/client-maker.svg" class="client-icon" />
+      </footer>
+    </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

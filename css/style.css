@@ -1,0 +1,337 @@
+/* CSS RESETS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom CSS properties --* */
+
+:root {
+  --main-fontfamily: "Epilogue", Arial, Helvetica, sans-serif;
+  --main-fontsize: 18px;
+  --color-almost-black: hsl(0, 0%, 8%);
+  --color-medium-gray: hsl(0, 0%, 41%);
+  --color-almost-white: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: var(--main-fontfamily);
+  font-size: var(--main-fontsize);
+  background-color: var(--color-almost-white);
+}
+
+.header {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 90px;
+}
+.dimmer {
+  display: none;
+}
+.dimmer.dim {
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* nav-links - top level link list */
+.nav-links {
+  background-color: var(--color-almost-white);
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 36%;
+  right: 0;
+  height: 100%;
+  padding-top: 3em;
+  flex-direction: column;
+  z-index: 9998;
+}
+
+.nav-links.expanded {
+  display: flex;
+}
+
+.nav-links:not(.expanded) {
+  display: none;
+}
+
+/* nav-item 2 variants */
+
+.nav-item {
+  display: block;
+  padding-left: 6%;
+}
+.nav-item-center {
+  display: flex;
+}
+
+/* nav-link */
+
+.nav-link {
+  padding: 0.8em 0.3em;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: var(--color-medium-gray);
+}
+
+.nav-link.has-sub::after {
+  position: absolute;
+  content: " ";
+  width: 15px;
+  height: 15px;
+  right: -20px;
+  top: 20px;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.nav-link.has-sub.expanded::after {
+  background-image: url("../images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-link:hover {
+  color: var(--color-almost-black);
+  transform: scale(1.05);
+}
+
+/* two variants of the nav-link */
+.nav-link.login-btn {
+  text-align: center;
+  margin: 1em auto 0;
+}
+.nav-link.register-btn {
+  border: 1px solid var(--color-medium-gray);
+  border-radius: 15px;
+  padding: 0.5em 3em;
+  margin: 0 auto;
+}
+
+/* second level link lists */
+.nav-sublinks.expanded {
+  display: flex;
+  flex-direction: column;
+}
+.nav-sublinks:not(.expanded) {
+  display: none;
+}
+
+/* indent on second level links */
+.nav-sublinks .nav-item {
+  padding-left: 1em;
+}
+
+/* Grid for the hero, slogan(main) and footer sections */
+.grid {
+  display: grid;
+  text-align: center;
+  margin: 0 auto;
+
+  grid-template-areas:
+    "hero"
+    "main"
+    "footer";
+}
+
+/* MENU TOGGLE BUTTON (JS) */
+
+.toggle-button {
+  position: absolute;
+  z-index: 9999;
+  right: 1.5em;
+  top: 1.5em;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  border: 0;
+  outline: none;
+  width: 30px;
+  height: 30px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.toggle-button:not(.expanded) {
+  background-image: url("../images/icon-menu.svg"); /* image to expand menu */
+}
+.toggle-button.expanded {
+  background-image: url("../images/icon-close-menu.svg"); /* image to collapse menu */
+}
+
+/* HERO IMAGE */
+.hero-container {
+  grid-area: hero;
+}
+.hero-image {
+  width: 100%;
+  display: block;
+
+  max-width: 750px; /* avoid stretching image - margin instead */
+  margin: 0 auto;
+}
+/* SLOGAN BLOCK (MAIN) */
+.slogan-block {
+  grid-area: main;
+  padding: 2.5em 0.5em;
+}
+.slogan-caption {
+  font-size: 34px;
+  color: var(--color-almost-black);
+}
+
+.slogan-copytext {
+  margin-top: 0.5em;
+  color: var(--color-medium-gray);
+  line-height: 1.5;
+  padding: 0 0.5em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.slogan-cta {
+  background-color: var(--color-almost-black);
+  color: var(--color-almost-white);
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  margin: 1.5em;
+  padding: 1em 1em;
+}
+.slogan-cta:hover {
+  box-shadow: 3px 3px 15px var(--color-medium-gray);
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-shrink: 1;
+  gap: 7%;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+  margin-bottom: 4em;
+}
+
+.client-icon {
+  width: 20%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 961px) {
+  /* two-column grid layout */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas:
+      "main   hero"
+      "footer hero";
+
+    max-width: 1250px;
+    column-gap: 10%;
+  }
+  .header {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1em 0.5em 1em;
+  }
+  .logo {
+    padding-top: 10px;
+  }
+  .nav {
+    width: 100%;
+  }
+  .toggle-button {
+    display: none;
+  }
+
+  .nav-links:not(.expanded) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0;
+    padding: 0;
+  }
+  .nav-item,
+  .nav-item-center {
+    padding-left: 4%;
+  }
+
+  .nav-link.login-btn,
+  .nav-link.register-btn {
+    margin-top: 0;
+  }
+  .nav-link.register-btn {
+    padding: 1em;
+  }
+  .nav-links li:nth-child(5) {
+    margin-left: auto;
+  }
+  .nav-sublinks {
+    position: absolute;
+    background-color: white;
+    padding: 1em 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 0 30px #aaa;
+  }
+  .nav-sublinks .nav-item {
+    padding: 0;
+  }
+  .hero-container {
+    margin-top: 2.5em;
+    margin-right: 2em;
+  }
+
+  .slogan-block {
+    max-width: 480px;
+    text-align: left;
+    margin-top: 8.5em;
+    margin-left: 2em;
+
+    padding: 0;
+  }
+  .slogan-caption {
+    font-size: 70px;
+  }
+  .slogan-copytext {
+    margin-top: 3em;
+    padding: 0;
+  }
+  .slogan-cta {
+    margin-left: 0;
+    margin-top: 3em;
+  }
+  .footer {
+    margin-left: 2em;
+    margin-top: 2.2em;
+    align-items: center;
+    padding: 0;
+  }
+  .attribution {
+    margin-top: 6em;
+  }
+}
