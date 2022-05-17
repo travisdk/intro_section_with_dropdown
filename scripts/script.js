@@ -9,10 +9,10 @@ toggleMenuButton.addEventListener("click", (e) => {
   dimmer.classList.toggle("dim");
 });
 
+const navLinks = document.querySelectorAll(".nav-link");
 // When user press any nav-link
 // In case the nav-link has submenu beneath it, it is made visible.
 // All others are collapsed
-const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", (e) => {
     const link = e.target;
