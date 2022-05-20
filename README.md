@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/travisdk/intro_section_with_dropdown)
-- Live Site URL: [Add live site URL here](https://travisdk.github.io/intro_section_with_dropdown/)
+- Solution URL: (https://github.com/travisdk/intro_section_with_dropdown)
+- Live Site URL: (https://travisdk.github.io/intro_section_with_dropdown/)
 
 ## My process
 
